@@ -5,6 +5,7 @@ import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
+import haxe.xml.Printer;
 
 class PlayState extends FlxState
 {
@@ -16,12 +17,14 @@ class PlayState extends FlxState
 		super.create();
 		sprite = new FlxSprite();
 		sprite.loadGraphic(AssetPaths.Lil_boi__png);
-		sprite.x = 0;
-		sprite.y = 0;
+		sprite.x = 150;
+		sprite.y = 150;
+		trace("Hello Player!");
 
 		text = new FlxText(0, 0, FlxG.width, "Welcome! Enjoy!", 64);
 		text.setFormat(null, 64, FlxColor.RED, FlxTextAlign.CENTER);
 		add(text);
+		trace("Wassup text");
 	}
 
 	override public function update(elapsed:Float)
